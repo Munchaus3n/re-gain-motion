@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-main.jpg";
 
 const HeroSection = () => {
@@ -13,21 +14,41 @@ const HeroSection = () => {
 
       <div className="relative container mx-auto px-6 py-24">
         <div className="max-w-2xl space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-muted border border-sage/20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-muted border border-sage/20"
+          >
             <span className="text-xs font-body font-semibold uppercase tracking-[0.15em] text-sage">Bodyweight Training</span>
-          </div>
+          </motion.div>
 
-          <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.05] text-charcoal">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="font-display text-5xl md:text-7xl font-bold leading-[1.05] text-charcoal"
+          >
             Move Better<span className="text-sage">.</span>
             <br />
             Get Stronger<span className="text-sage">.</span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed max-w-lg">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed max-w-lg"
+          >
             KUNERA is premium bodyweight training for everyone. Build strength, improve mobility, and feel healthier — at your own pace. Women can also join SPARTI, our dedicated women-only path.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col sm:flex-row gap-4"
+          >
             <Link to="/contact">
               <Button size="lg" className="bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body text-sm px-8 py-6 gap-2 shadow-elevated">
                 Register Now
@@ -39,9 +60,14 @@ const HeroSection = () => {
                 Explore SPARTI
               </Button>
             </Link>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-12 pt-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.85 }}
+            className="flex gap-12 pt-4"
+          >
             {[
               { value: "100%", label: "Bodyweight Based" },
               { value: "2", label: "Training Paths" },
@@ -52,7 +78,7 @@ const HeroSection = () => {
                 <p className="text-xs text-muted-foreground font-body">{stat.label}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
