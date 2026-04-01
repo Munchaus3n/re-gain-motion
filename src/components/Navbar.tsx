@@ -8,6 +8,8 @@ const navLinks = [
   { label: "KUNERA", href: "/kunera" },
   { label: "SPARTI", href: "/sparti" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
