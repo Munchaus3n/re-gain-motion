@@ -24,6 +24,8 @@ const Footer = () => {
                 { label: "KUNERA", href: "/kunera" },
                 { label: "SPARTI", href: "/sparti" },
                 { label: "Pricing", href: "/pricing" },
+                { label: "Gallery", href: "/gallery" },
+                { label: "Blog", href: "/blog" },
                 { label: "FAQ", href: "/faq" },
               ].map((link) => (
                 <Link key={link.href} to={link.href} className="block text-sm font-body text-primary-foreground/40 hover:text-primary-foreground transition-colors">
