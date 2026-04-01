@@ -1,4 +1,5 @@
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const contactInfo = [
   { icon: MapPin, label: "Training Studio Address, City" },
@@ -12,11 +13,9 @@ const LocationSection = () => {
     <section className="py-24 bg-cream">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
-          <div>
+          <AnimatedSection>
             <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-sage mb-3 block">Location</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
-              Find Us
-            </h2>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">Find Us</h2>
             <div className="space-y-5">
               {contactInfo.map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-4">
@@ -27,16 +26,17 @@ const LocationSection = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </AnimatedSection>
 
-          {/* Map placeholder */}
-          <div className="bg-sand-light rounded-2xl flex items-center justify-center min-h-[350px] border border-border">
-            <div className="text-center space-y-2">
-              <MapPin className="w-10 h-10 text-taupe mx-auto" />
-              <p className="font-body text-sm text-taupe">Map placeholder</p>
-              <p className="font-body text-xs text-muted-foreground">Embed Google Maps here</p>
+          <AnimatedItem delay={0.15}>
+            <div className="bg-sand-light rounded-2xl flex items-center justify-center min-h-[350px] border border-border">
+              <div className="text-center space-y-2">
+                <MapPin className="w-10 h-10 text-taupe mx-auto" />
+                <p className="font-body text-sm text-taupe">Map placeholder</p>
+                <p className="font-body text-xs text-muted-foreground">Embed Google Maps here</p>
+              </div>
             </div>
-          </div>
+          </AnimatedItem>
         </div>
       </div>
     </section>
