@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 204 30% 97%;
     --foreground: 210 15% 15%;
 
-    --card: 210 50% 97%;
+    --card: 0 0% 100%;
     --card-foreground: 210 15% 15%;
 
     --popover: 0 0% 100%;
@@ -16,20 +16,20 @@
     --primary: 200 30% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 207 45% 89%;
+    --secondary: 204 35% 92%;
     --secondary-foreground: 210 15% 20%;
 
-    --muted: 207 35% 91%;
+    --muted: 204 25% 93%;
     --muted-foreground: 210 8% 45%;
 
-    --accent: 207 40% 86%;
+    --accent: 204 30% 90%;
     --accent-foreground: 210 15% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 207 30% 82%;
-    --input: 207 30% 82%;
+    --border: 204 20% 88%;
+    --input: 204 20% 88%;
     --ring: 200 30% 50%;
 
     --radius: 0.5rem;
@@ -37,23 +37,23 @@
     /* Brand tokens */
     --sage: 200 30% 50%;
     --sage-light: 200 35% 70%;
-    --sage-muted: 207 50% 90%;
-    --sand: 207 40% 78%;
-    --sand-light: 207 45% 89%;
+    --sage-muted: 204 40% 92%;
+    --sand: 204 30% 82%;
+    --sand-light: 204 35% 93%;
     --taupe: 210 12% 55%;
     --bronze: 195 25% 55%;
     --bronze-light: 195 30% 72%;
     --charcoal: 210 15% 18%;
     --charcoal-light: 210 10% 35%;
-    --cream: 210 50% 95%;
-    --warm-white: 210 40% 98%;
+    --cream: 204 35% 95%;
+    --warm-white: 204 30% 98%;
 
     --font-display: 'Cormorant Garamond', serif;
     --font-body: 'Manrope', sans-serif;
 
     --shadow-soft: 0 4px 24px -4px hsl(210 15% 15% / 0.06);
     --shadow-elevated: 0 12px 40px -8px hsl(210 15% 15% / 0.1);
-    --shadow-card: 0 1px 3px hsl(210 15% 15% / 0.04), 0 8px 24px -4px hsl(210 15% 15% / 0.07);
+    --shadow-card: 0 1px 3px hsl(210 15% 15% / 0.03), 0 8px 24px -4px hsl(210 15% 15% / 0.05);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
