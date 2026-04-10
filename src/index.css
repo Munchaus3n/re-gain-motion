@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 204 30% 97%;
+    --background: 200 40% 97%;
     --foreground: 210 15% 15%;
 
     --card: 0 0% 100%;
@@ -13,40 +13,40 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 15% 15%;
 
-    --primary: 200 30% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 200 82% 62%;
+    --primary-foreground: 210 20% 12%;
 
-    --secondary: 204 35% 92%;
+    --secondary: 200 50% 93%;
     --secondary-foreground: 210 15% 20%;
 
-    --muted: 204 25% 93%;
-    --muted-foreground: 210 8% 45%;
+    --muted: 200 35% 94%;
+    --muted-foreground: 210 10% 45%;
 
-    --accent: 204 30% 90%;
+    --accent: 200 60% 91%;
     --accent-foreground: 210 15% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 204 20% 88%;
-    --input: 204 20% 88%;
-    --ring: 200 30% 50%;
+    --border: 200 30% 88%;
+    --input: 200 30% 88%;
+    --ring: 200 82% 62%;
 
     --radius: 0.5rem;
 
     /* Brand tokens */
-    --sage: 200 30% 50%;
-    --sage-light: 200 35% 70%;
-    --sage-muted: 204 40% 92%;
-    --sand: 204 30% 82%;
-    --sand-light: 204 35% 93%;
-    --taupe: 210 12% 55%;
-    --bronze: 195 25% 55%;
-    --bronze-light: 195 30% 72%;
-    --charcoal: 210 15% 18%;
-    --charcoal-light: 210 10% 35%;
-    --cream: 204 35% 95%;
-    --warm-white: 204 30% 98%;
+    --sage: 200 82% 62%;
+    --sage-light: 200 82% 82%;
+    --sage-muted: 200 55% 93%;
+    --sand: 200 50% 85%;
+    --sand-light: 200 45% 94%;
+    --taupe: 210 15% 55%;
+    --bronze: 200 40% 55%;
+    --bronze-light: 200 50% 72%;
+    --charcoal: 210 18% 16%;
+    --charcoal-light: 210 12% 33%;
+    --cream: 200 40% 96%;
+    --warm-white: 200 35% 98%;
 
     --font-display: 'Cormorant Garamond', serif;
     --font-body: 'Manrope', sans-serif;
@@ -62,7 +62,7 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 200 30% 50%;
+    --sidebar-ring: 200 82% 62%;
   }
 }
 
