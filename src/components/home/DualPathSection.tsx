@@ -20,7 +20,7 @@ const DualPathSection = () => {
               <div className="h-56 overflow-hidden">
                 <img src={kuneraImage} alt="KUNERA group training" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <div className="p-8 space-y-5">
+              <div className="p-8 space-y-5 flex flex-col">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-sage-muted flex items-center justify-center">
                     <Users className="w-5 h-5 text-sage" />
@@ -35,7 +35,7 @@ const DualPathSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact?program=kunera" className="mt-3">
+                <Link to="/contact?program=kunera" className="mt-auto pt-4">
                   <Button className="w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body gap-2 py-5">
                     Register for KUNERA<ArrowRight className="w-4 h-4" />
                   </Button>
@@ -52,7 +52,7 @@ const DualPathSection = () => {
                   <span className="font-body text-xs text-taupe uppercase tracking-widest">Women Only</span>
                 </div>
               </div>
-              <div className="p-8 space-y-5">
+              <div className="p-8 space-y-5 flex flex-col">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-sand-light flex items-center justify-center">
                     <Heart className="w-5 h-5 text-bronze" />
@@ -67,7 +67,7 @@ const DualPathSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact?program=sparti" className="mt-3">
+                <Link to="/contact?program=sparti" className="mt-auto pt-4">
                   <Button className="w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body gap-2 py-5">
                     Register for SPARTI<ArrowRight className="w-4 h-4" />
                   </Button>
