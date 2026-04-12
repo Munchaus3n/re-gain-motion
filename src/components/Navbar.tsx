@@ -69,7 +69,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <div className="gap-4 flex-row pt-0 my-[20px] pb-0 flex items-center justify-center">
+          <div className="gap-4 flex-row pt-0 pb-0 flex items-center justify-center my-[21px]">
             <span className="text-xs font-body font-medium text-muted-foreground">EN / NL</span>
           </div>
           <Link to="/contact" onClick={() => setIsOpen(false)}>
