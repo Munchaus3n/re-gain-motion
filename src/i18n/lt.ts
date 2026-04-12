@@ -240,7 +240,7 @@ export const lt: typeof en = {
             { q: "Kas yra KUNERA?", a: "KUNERA yra aukščiausios kokybės kūno svorio treniruočių prekės ženklas, siūlantis asmenines ir grupines treniruotes visiems. Dėmesys – funkcinei jėgai, judesio amplitudei ir tvariai sveikatai." },
             { q: "Kas yra SPARTI?", a: "SPARTI yra mūsų treniruočių kryptis tik moterims, priklausanti KUNERA šeimai. Ji siūlo tokios pat kokybės treniruotes skirtoje, palaikančioje aplinkoje, skirtoje tik moterims." },
             { q: "Ar KUNERA atvira visiems?", a: "Taip! KUNERA atvira visų amžių, fizinio pasirengimo lygių ir patirčių žmonėms. Nesvarbu, ar esi visiškas pradedantysis, ar patyręs – čia yra vieta tau." },
-            { q: "Ką reiškia „kūno svorio treniruotės"?", a: "Kūno svorio treniruotės naudoja tavo paties kūną kaip pasipriešinimą vietoj treniruoklių ar svorių. Tai ugdo funkcinę jėgą, gerina judesio amplitudę ir mažina traumų riziką." },
+            { q: 'Ką reiškia „kūno svorio treniruotės"?', a: "Kūno svorio treniruotės naudoja tavo paties kūną kaip pasipriešinimą vietoj treniruoklių ar svorių. Tai ugdo funkcinę jėgą, gerina judesio amplitudę ir mažina traumų riziką." },
           ],
         },
         {
