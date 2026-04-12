@@ -3,8 +3,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-main.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0">
@@ -20,7 +23,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-muted border border-sage/20"
           >
-            <span className="text-xs font-body font-semibold uppercase tracking-[0.15em] text-sage">Bodyweight Training</span>
+            <span className="text-xs font-body font-semibold uppercase tracking-[0.15em] text-sage">{t.hero.badge}</span>
           </motion.div>
 
           <motion.h1
@@ -29,9 +32,9 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-5xl md:text-7xl font-bold leading-[1.05] text-charcoal"
           >
-            Move Better<span className="text-sage">.</span>
+            {t.hero.title1}<span className="text-sage">.</span>
             <br />
-            Get Stronger<span className="text-sage">.</span>
+            {t.hero.title2}<span className="text-sage">.</span>
           </motion.h1>
 
           <motion.p
@@ -40,7 +43,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed max-w-lg"
           >
-            KUNERA is premium bodyweight training for everyone. Build strength, improve mobility, and feel healthier — at your own pace. Women can also join SPARTI, our dedicated women-only path.
+            {t.hero.description}
           </motion.p>
 
           <motion.div
@@ -51,13 +54,13 @@ const HeroSection = () => {
           >
             <Link to="/contact">
               <Button size="lg" className="bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body text-sm px-8 py-6 gap-2 shadow-elevated">
-                Register Now
+                {t.hero.registerNow}
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
             <Link to="/sparti">
               <Button size="lg" variant="outline" className="border-charcoal/20 text-charcoal hover:bg-accent font-body text-sm px-8 py-6">
-                Explore SPARTI
+                {t.hero.exploreSparti}
               </Button>
             </Link>
           </motion.div>
@@ -69,9 +72,9 @@ const HeroSection = () => {
             className="flex gap-12 pt-4"
           >
             {[
-              { value: "100%", label: "Bodyweight Based" },
-              { value: "2", label: "Training Paths" },
-              { value: "Personal", label: "& Group Training" },
+              { value: t.hero.stat1Value, label: t.hero.stat1Label },
+              { value: t.hero.stat2Value, label: t.hero.stat2Label },
+              { value: t.hero.stat3Value, label: t.hero.stat3Label },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="font-display text-2xl md:text-3xl font-bold text-charcoal">{stat.value}</p>

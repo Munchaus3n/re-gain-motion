@@ -2,32 +2,23 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { User, Users, ArrowRight } from "lucide-react";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
-
-const services = [
-  {
-    icon: User,
-    title: "Personal Training",
-    description: "One-on-one sessions tailored to your body, goals, and pace. Fully personalized programming with direct coaching and accountability.",
-    audience: "Available in both KUNERA and SPARTI",
-    href: "/personal-training",
-  },
-  {
-    icon: Users,
-    title: "Group Training",
-    description: "Train alongside others in a motivating, supportive environment. Small groups ensure personal attention while building community.",
-    audience: "Available in both KUNERA and SPARTI",
-    href: "/group-training",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+
+  const services = [
+    { icon: User, title: t.services.personal.title, description: t.services.personal.description, audience: t.services.personal.audience, href: "/personal-training" },
+    { icon: Users, title: t.services.group.title, description: t.services.group.description, audience: t.services.group.audience, href: "/group-training" },
+  ];
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-          <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-sage mb-3 block">Services</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-4">How You Can Train</h2>
-          <p className="text-muted-foreground font-body text-lg">Choose the training format that suits your preferences. Both are bodyweight-based, coach-led, and designed for real results.</p>
+          <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-sage mb-3 block">{t.services.badge}</span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-4">{t.services.title}</h2>
+          <p className="text-muted-foreground font-body text-lg">{t.services.subtitle}</p>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -42,7 +33,7 @@ const ServicesSection = () => {
                 <p className="text-xs font-body font-medium text-sage uppercase tracking-wide mb-6">{service.audience}</p>
                 <Link to={service.href}>
                   <Button variant="outline" className="border-charcoal/15 text-charcoal hover:bg-accent font-body gap-2">
-                    Learn More<ArrowRight className="w-4 h-4" />
+                    {t.services.learnMore}<ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
               </div>

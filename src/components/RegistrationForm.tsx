@@ -4,6 +4,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const registrationSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -24,13 +25,14 @@ const inputClasses = "w-full px-4 py-3 rounded-lg border border-border bg-backgr
 const labelClasses = "block text-sm font-body font-medium text-foreground mb-1.5";
 
 const RegistrationForm = () => {
+  const { t } = useLanguage();
   const { register, handleSubmit, formState: { errors }, reset } = useForm<RegistrationData>({
     resolver: zodResolver(registrationSchema),
     defaultValues: { program: "not-sure", trainingType: "not-sure" },
   });
 
-  const onSubmit = (data: RegistrationData) => {
-    toast.success("Registration submitted! We'll be in touch soon.");
+  const onSubmit = (_data: RegistrationData) => {
+    toast.success(t.form.success);
     reset();
   };
 
@@ -38,70 +40,70 @@ const RegistrationForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className={labelClasses}>Name *</label>
-          <input {...register("name")} className={inputClasses} placeholder="Your full name" />
-          {errors.name && <p className="text-xs text-destructive mt-1">{errors.name.message}</p>}
+          <label className={labelClasses}>{t.form.name} *</label>
+          <input {...register("name")} className={inputClasses} placeholder={t.form.namePlaceholder} />
+          {errors.name && <p className="text-xs text-destructive mt-1">{t.form.nameRequired}</p>}
         </div>
         <div>
-          <label className={labelClasses}>Phone *</label>
-          <input {...register("phone")} type="tel" className={inputClasses} placeholder="+31 6 ..." />
-          {errors.phone && <p className="text-xs text-destructive mt-1">{errors.phone.message}</p>}
+          <label className={labelClasses}>{t.form.phone} *</label>
+          <input {...register("phone")} type="tel" className={inputClasses} placeholder={t.form.phonePlaceholder} />
+          {errors.phone && <p className="text-xs text-destructive mt-1">{t.form.phoneRequired}</p>}
         </div>
       </div>
 
       <div>
-        <label className={labelClasses}>Email *</label>
-        <input {...register("email")} type="email" className={inputClasses} placeholder="your@email.com" />
-        {errors.email && <p className="text-xs text-destructive mt-1">{errors.email.message}</p>}
+        <label className={labelClasses}>{t.form.email} *</label>
+        <input {...register("email")} type="email" className={inputClasses} placeholder={t.form.emailPlaceholder} />
+        {errors.email && <p className="text-xs text-destructive mt-1">{t.form.invalidEmail}</p>}
       </div>
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className={labelClasses}>I'm interested in</label>
+          <label className={labelClasses}>{t.form.interestedIn}</label>
           <select {...register("program")} className={inputClasses}>
-            <option value="kunera">KUNERA — For everyone</option>
-            <option value="sparti">SPARTI — Women only</option>
-            <option value="not-sure">Not sure yet</option>
+            <option value="kunera">{t.form.kuneraOption}</option>
+            <option value="sparti">{t.form.spartiOption}</option>
+            <option value="not-sure">{t.form.notSureOption}</option>
           </select>
         </div>
         <div>
-          <label className={labelClasses}>Training type</label>
+          <label className={labelClasses}>{t.form.trainingType}</label>
           <select {...register("trainingType")} className={inputClasses}>
-            <option value="personal">Personal Training</option>
-            <option value="group">Group Training</option>
-            <option value="not-sure">Not sure yet</option>
+            <option value="personal">{t.form.personalOption}</option>
+            <option value="group">{t.form.groupOption}</option>
+            <option value="not-sure">{t.form.notSureOption}</option>
           </select>
         </div>
       </div>
 
       <div>
-        <label className={labelClasses}>What do you want to improve?</label>
-        <input {...register("goal")} className={inputClasses} placeholder="Strength, mobility, confidence..." />
+        <label className={labelClasses}>{t.form.improve}</label>
+        <input {...register("goal")} className={inputClasses} placeholder={t.form.improvePlaceholder} />
       </div>
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className={labelClasses}>Experience level</label>
-          <input {...register("experience")} className={inputClasses} placeholder="Beginner, some experience..." />
+          <label className={labelClasses}>{t.form.experience}</label>
+          <input {...register("experience")} className={inputClasses} placeholder={t.form.experiencePlaceholder} />
         </div>
         <div>
-          <label className={labelClasses}>Preferred days / times</label>
-          <input {...register("preferredTime")} className={inputClasses} placeholder="Mornings, weekends..." />
+          <label className={labelClasses}>{t.form.preferredTime}</label>
+          <input {...register("preferredTime")} className={inputClasses} placeholder={t.form.preferredTimePlaceholder} />
         </div>
       </div>
 
       <div>
-        <label className={labelClasses}>Injuries or physical limitations?</label>
-        <input {...register("injuries")} className={inputClasses} placeholder="Any relevant information" />
+        <label className={labelClasses}>{t.form.injuries}</label>
+        <input {...register("injuries")} className={inputClasses} placeholder={t.form.injuriesPlaceholder} />
       </div>
 
       <div>
-        <label className={labelClasses}>Additional message</label>
-        <textarea {...register("message")} rows={3} className={`${inputClasses} resize-none`} placeholder="Anything else you'd like us to know" />
+        <label className={labelClasses}>{t.form.message}</label>
+        <textarea {...register("message")} rows={3} className={`${inputClasses} resize-none`} placeholder={t.form.messagePlaceholder} />
       </div>
 
       <Button type="submit" className="w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body py-6 gap-2">
-        Submit Registration
+        {t.form.submit}
         <ArrowRight className="w-4 h-4" />
       </Button>
     </form>

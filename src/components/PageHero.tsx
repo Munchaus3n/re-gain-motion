@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface PageHeroProps {
   title: string;
@@ -12,7 +13,10 @@ interface PageHeroProps {
   secondaryCtaHref?: string;
 }
 
-const PageHero = ({ title, subtitle, badge, ctaLabel = "Register Now", ctaHref = "/contact", secondaryCtaLabel, secondaryCtaHref }: PageHeroProps) => {
+const PageHero = ({ title, subtitle, badge, ctaLabel, ctaHref = "/contact", secondaryCtaLabel, secondaryCtaHref }: PageHeroProps) => {
+  const { t } = useLanguage();
+  const buttonLabel = ctaLabel || t.common.registerNow;
+
   return (
     <section className="pt-32 pb-20 bg-cream">
       <div className="container mx-auto px-6 max-w-3xl text-center">
@@ -30,7 +34,7 @@ const PageHero = ({ title, subtitle, badge, ctaLabel = "Register Now", ctaHref =
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to={ctaHref}>
             <Button size="lg" className="bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body text-sm px-8 py-6 gap-2">
-              {ctaLabel}
+              {buttonLabel}
               <ArrowRight className="w-4 h-4" />
             </Button>
           </Link>

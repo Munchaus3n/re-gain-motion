@@ -3,15 +3,18 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Heart } from "lucide-react";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 import kuneraImage from "@/assets/kunera-training.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const DualPathSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-          <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-sage mb-3 block">Two Paths, One Mission</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-4">Choose Your Path</h2>
-          <p className="text-muted-foreground font-body text-lg">Whether you're looking for inclusive training or a women-only environment, we have the right path for you.</p>
+          <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-sage mb-3 block">{t.dualPath.badge}</span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-4">{t.dualPath.title}</h2>
+          <p className="text-muted-foreground font-body text-lg">{t.dualPath.subtitle}</p>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -27,9 +30,9 @@ const DualPathSection = () => {
                   </div>
                   <h3 className="font-display text-3xl font-bold text-charcoal">KUNERA</h3>
                 </div>
-                <p className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-sage">Training for Everyone</p>
+                <p className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-sage">{t.dualPath.kuneraSubtitle}</p>
                 <ul className="space-y-2">
-                  {["Open to all levels and backgrounds", "Bodyweight-based strength & movement", "Personal and group training available", "Sustainable, healthy approach"].map((item) => (
+                  {t.dualPath.kuneraFeatures.map((item) => (
                     <li key={item} className="flex items-start gap-2 text-sm font-body text-muted-foreground">
                       <span className="text-sage mt-0.5">•</span>{item}
                     </li>
@@ -37,7 +40,7 @@ const DualPathSection = () => {
                 </ul>
                 <Link to="/contact?program=kunera" className="mt-auto pt-4">
                   <Button className="w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body gap-2 py-5">
-                    Register for KUNERA<ArrowRight className="w-4 h-4" />
+                    {t.dualPath.registerKunera}<ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
               </div>
@@ -49,7 +52,7 @@ const DualPathSection = () => {
               <div className="h-56 overflow-hidden bg-sand-light flex items-center justify-center">
                 <div className="text-center">
                   <Heart className="w-12 h-12 text-bronze mx-auto mb-2" />
-                  <span className="font-body text-xs text-taupe uppercase tracking-widest">Women Only</span>
+                  <span className="font-body text-xs text-taupe uppercase tracking-widest">{t.dualPath.womenOnly}</span>
                 </div>
               </div>
               <div className="p-8 space-y-5 flex flex-col">
@@ -59,9 +62,9 @@ const DualPathSection = () => {
                   </div>
                   <h3 className="font-display text-3xl font-bold text-charcoal">SPARTI</h3>
                 </div>
-                <p className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-bronze">Women-Only Training</p>
+                <p className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-bronze">{t.dualPath.spartiSubtitle}</p>
                 <ul className="space-y-2">
-                  {["Dedicated women-only environment", "Supportive and empowering atmosphere", "Personal and group training available", "Build strength, health & confidence"].map((item) => (
+                  {t.dualPath.spartiFeatures.map((item) => (
                     <li key={item} className="flex items-start gap-2 text-sm font-body text-muted-foreground">
                       <span className="text-bronze mt-0.5">•</span>{item}
                     </li>
@@ -69,7 +72,7 @@ const DualPathSection = () => {
                 </ul>
                 <Link to="/contact?program=sparti" className="mt-auto pt-4">
                   <Button className="w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body gap-2 py-5">
-                    Register for SPARTI<ArrowRight className="w-4 h-4" />
+                    {t.dualPath.registerSparti}<ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
               </div>
