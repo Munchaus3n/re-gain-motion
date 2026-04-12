@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden bg-background border-t border-border px-6 py-6 space-y-4">
+        <div className="lg:hidden border-t px-6 py-6 space-y-4 border-[#dae2e7]/0 bg-[#f5f8fa]/[0.49] text-center pt-[24px] pb-[24px] shadow-none">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -69,7 +69,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <div className="flex items-center gap-4 pt-2">
+          <div className="gap-4 flex-row pt-0 my-[20px] pb-0 flex items-center justify-center">
             <span className="text-xs font-body font-medium text-muted-foreground">EN / NL</span>
           </div>
           <Link to="/contact" onClick={() => setIsOpen(false)}>
