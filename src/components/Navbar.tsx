@@ -19,7 +19,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b bg-sand border-sand">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b bg-white/0 border-white/0 opacity-100">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="font-display text-2xl font-bold text-charcoal tracking-tight">
           KUNERA<span className="text-sage">.</span>
