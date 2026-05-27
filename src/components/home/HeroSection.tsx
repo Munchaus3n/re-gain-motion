@@ -53,14 +53,15 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Link to="/contact">
-              <Button size="lg" className="bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body text-sm px-8 py-6 gap-2 shadow-elevated">
+              <Button size="lg" variant="hero" className="text-sm px-9 py-6 gap-2">
                 {t.hero.registerNow}
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
             <Link to="/sparti">
-              <Button size="lg" variant="outline" className="border-charcoal/20 text-charcoal hover:bg-accent font-body text-sm px-8 py-6">
+              <Button size="lg" variant="heroOutline" className="text-sm px-9 py-6 gap-2">
                 {t.hero.exploreSparti}
+                <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
           </motion.div>

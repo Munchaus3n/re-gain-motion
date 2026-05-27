@@ -33,15 +33,16 @@ const PageHero = ({ title, subtitle, badge, ctaLabel, ctaHref = "/contact", seco
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to={ctaHref}>
-            <Button size="lg" className="bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body text-sm px-8 py-6 gap-2">
+            <Button size="lg" variant="hero" className="text-sm px-9 py-6 gap-2">
               {buttonLabel}
               <ArrowRight className="w-4 h-4" />
             </Button>
           </Link>
           {secondaryCtaLabel && secondaryCtaHref && (
             <Link to={secondaryCtaHref}>
-              <Button size="lg" variant="outline" className="border-charcoal/20 text-charcoal hover:bg-accent font-body text-sm px-8 py-6">
+              <Button size="lg" variant="heroOutline" className="text-sm px-9 py-6 gap-2">
                 {secondaryCtaLabel}
+                <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
           )}

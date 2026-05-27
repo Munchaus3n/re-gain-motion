@@ -32,7 +32,7 @@ const ServicesSection = () => {
                 <p className="text-muted-foreground font-body leading-relaxed mb-4">{service.description}</p>
                 <p className="text-xs font-body font-medium text-sage uppercase tracking-wide mb-6">{service.audience}</p>
                 <Link to={service.href}>
-                  <Button variant="outline" className="border-charcoal/15 text-charcoal hover:bg-accent font-body gap-2">
+                  <Button variant="heroOutline" className="text-sm px-6 py-5 gap-2">
                     {t.services.learnMore}<ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
