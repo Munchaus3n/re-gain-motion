@@ -71,7 +71,7 @@ const DualPathSection = () => {
                   ))}
                 </ul>
                 <Link to="/contact?program=sparti" className="mt-auto pt-4">
-                  <Button className="w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body gap-2 py-5">
+                  <Button variant="hero" className="w-full text-sm py-5 gap-2">
                     {t.dualPath.registerSparti}<ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
