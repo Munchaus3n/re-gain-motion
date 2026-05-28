@@ -17,7 +17,7 @@ const FinalCTA = () => {
           {t.finalCta.subtitle}
         </p>
         <Link to="/contact">
-          <Button size="lg" variant="hero" className="text-sm px-10 py-6 gap-2 bg-sage hover:bg-sage shadow-[0_18px_40px_-12px_hsl(var(--sage)/0.6)]">
+          <Button size="lg" className="bg-sage hover:bg-sage-light text-primary-foreground font-body text-sm px-10 py-6 gap-2 shadow-elevated">
             {t.finalCta.registerNow}<ArrowRight className="w-4 h-4" />
           </Button>
         </Link>

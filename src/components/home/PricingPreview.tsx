@@ -38,7 +38,7 @@ const PricingPreview = () => {
                   ))}
                 </ul>
                 <Link to="/contact">
-                  <Button variant={i === popularIndex ? "hero" : "heroOutline"} className="w-full text-sm py-5 gap-2">
+                  <Button className={`w-full font-body gap-2 ${i === popularIndex ? "bg-charcoal hover:bg-charcoal-light text-primary-foreground" : "bg-transparent border border-charcoal/15 text-charcoal hover:bg-accent"}`}>
                     {t.pricingPreview.register}<ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
