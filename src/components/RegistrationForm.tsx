@@ -43,7 +43,7 @@ const RegistrationForm = ({ compact = false }: { compact?: boolean }) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={compact ? "space-y-3" : "space-y-5"}>
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className={`grid sm:grid-cols-2 ${gapClasses}`}>
         <div>
           <label className={labelClasses}>{t.form.name} *</label>
           <input {...register("name")} className={inputClasses} placeholder={t.form.namePlaceholder} />
@@ -62,7 +62,7 @@ const RegistrationForm = ({ compact = false }: { compact?: boolean }) => {
         {errors.email && <p className="text-xs text-destructive mt-1">{t.form.invalidEmail}</p>}
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className={`grid sm:grid-cols-2 ${gapClasses}`}>
         <div>
           <label className={labelClasses}>{t.form.interestedIn}</label>
           <select {...register("program")} className={inputClasses}>
@@ -86,7 +86,7 @@ const RegistrationForm = ({ compact = false }: { compact?: boolean }) => {
         <input {...register("goal")} className={inputClasses} placeholder={t.form.improvePlaceholder} />
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className={`grid sm:grid-cols-2 ${gapClasses}`}>
         <div>
           <label className={labelClasses}>{t.form.experience}</label>
           <input {...register("experience")} className={inputClasses} placeholder={t.form.experiencePlaceholder} />
@@ -104,10 +104,10 @@ const RegistrationForm = ({ compact = false }: { compact?: boolean }) => {
 
       <div>
         <label className={labelClasses}>{t.form.message}</label>
-        <textarea {...register("message")} rows={3} className={`${inputClasses} resize-none`} placeholder={t.form.messagePlaceholder} />
+        <textarea {...register("message")} rows={compact ? 2 : 3} className={`${inputClasses} resize-none`} placeholder={t.form.messagePlaceholder} />
       </div>
 
-      <Button type="submit" className="w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body py-6 gap-2">
+      <Button type="submit" className={`w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body gap-2 ${compact ? "py-5" : "py-6"}`}>
         {t.form.submit}
         <ArrowRight className="w-4 h-4" />
       </Button>
