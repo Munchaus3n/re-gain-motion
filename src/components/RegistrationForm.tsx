@@ -21,15 +21,20 @@ const registrationSchema = z.object({
 
 type RegistrationData = z.infer<typeof registrationSchema>;
 
-const inputClasses = "w-full px-4 py-3 rounded-lg border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-sage/20 focus:border-sage transition";
-const labelClasses = "block text-sm font-body font-medium text-foreground mb-1.5";
-
-const RegistrationForm = () => {
+const RegistrationForm = ({ compact = false }: { compact?: boolean }) => {
   const { t } = useLanguage();
   const { register, handleSubmit, formState: { errors }, reset } = useForm<RegistrationData>({
     resolver: zodResolver(registrationSchema),
     defaultValues: { program: "not-sure", trainingType: "not-sure" },
   });
+
+  const inputClasses = compact
+    ? "w-full px-3 py-2 rounded-md border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-sage/20 focus:border-sage transition"
+    : "w-full px-4 py-3 rounded-lg border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-sage/20 focus:border-sage transition";
+  const labelClasses = compact
+    ? "block text-xs font-body font-medium text-foreground mb-1"
+    : "block text-sm font-body font-medium text-foreground mb-1.5";
+  const gapClasses = compact ? "gap-3" : "gap-4";
 
   const onSubmit = (_data: RegistrationData) => {
     toast.success(t.form.success);
@@ -37,8 +42,8 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-      <div className="grid sm:grid-cols-2 gap-4">
+    <form onSubmit={handleSubmit(onSubmit)} className={compact ? "space-y-3" : "space-y-5"}>
+      <div className={`grid sm:grid-cols-2 ${gapClasses}`}>
         <div>
           <label className={labelClasses}>{t.form.name} *</label>
           <input {...register("name")} className={inputClasses} placeholder={t.form.namePlaceholder} />
@@ -57,7 +62,7 @@ const RegistrationForm = () => {
         {errors.email && <p className="text-xs text-destructive mt-1">{t.form.invalidEmail}</p>}
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className={`grid sm:grid-cols-2 ${gapClasses}`}>
         <div>
           <label className={labelClasses}>{t.form.interestedIn}</label>
           <select {...register("program")} className={inputClasses}>
@@ -81,7 +86,7 @@ const RegistrationForm = () => {
         <input {...register("goal")} className={inputClasses} placeholder={t.form.improvePlaceholder} />
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className={`grid sm:grid-cols-2 ${gapClasses}`}>
         <div>
           <label className={labelClasses}>{t.form.experience}</label>
           <input {...register("experience")} className={inputClasses} placeholder={t.form.experiencePlaceholder} />
@@ -99,10 +104,10 @@ const RegistrationForm = () => {
 
       <div>
         <label className={labelClasses}>{t.form.message}</label>
-        <textarea {...register("message")} rows={3} className={`${inputClasses} resize-none`} placeholder={t.form.messagePlaceholder} />
+        <textarea {...register("message")} rows={compact ? 2 : 3} className={`${inputClasses} resize-none`} placeholder={t.form.messagePlaceholder} />
       </div>
 
-      <Button type="submit" className="w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body py-6 gap-2">
+      <Button type="submit" className={`w-full bg-charcoal hover:bg-charcoal-light text-primary-foreground font-body gap-2 ${compact ? "py-5" : "py-6"}`}>
         {t.form.submit}
         <ArrowRight className="w-4 h-4" />
       </Button>
