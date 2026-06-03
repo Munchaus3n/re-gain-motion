@@ -21,15 +21,20 @@ const registrationSchema = z.object({
 
 type RegistrationData = z.infer<typeof registrationSchema>;
 
-const inputClasses = "w-full px-4 py-3 rounded-lg border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-sage/20 focus:border-sage transition";
-const labelClasses = "block text-sm font-body font-medium text-foreground mb-1.5";
-
-const RegistrationForm = () => {
+const RegistrationForm = ({ compact = false }: { compact?: boolean }) => {
   const { t } = useLanguage();
   const { register, handleSubmit, formState: { errors }, reset } = useForm<RegistrationData>({
     resolver: zodResolver(registrationSchema),
     defaultValues: { program: "not-sure", trainingType: "not-sure" },
   });
+
+  const inputClasses = compact
+    ? "w-full px-3 py-2 rounded-md border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-sage/20 focus:border-sage transition"
+    : "w-full px-4 py-3 rounded-lg border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-sage/20 focus:border-sage transition";
+  const labelClasses = compact
+    ? "block text-xs font-body font-medium text-foreground mb-1"
+    : "block text-sm font-body font-medium text-foreground mb-1.5";
+  const gapClasses = compact ? "gap-3" : "gap-4";
 
   const onSubmit = (_data: RegistrationData) => {
     toast.success(t.form.success);
@@ -37,7 +42,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+    <form onSubmit={handleSubmit(onSubmit)} className={compact ? "space-y-3" : "space-y-5"}>
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className={labelClasses}>{t.form.name} *</label>
