@@ -350,6 +350,40 @@ export const lt: typeof en = {
         { slug: "mobility-over-flexibility", title: "Judesio amplitudė, o ne lankstumas: kas iš tikrųjų svarbu tavo kūnui", excerpt: "Lankstumas be kontrolės yra beprasmis. Sužinok, kodėl judesio amplitudės treniruotės veda prie geresnio judėjimo ir mažiau traumų.", category: "Judėjimas", date: "2026 m. sausis", readTime: "6 min skaitymo" },
         { slug: "beginners-guide", title: "Tavo pirmoji treniruotė: ko tikėtis KUNERA", excerpt: "Jaudinatės dėl pradžios? Štai kas tiksliai vyksta per pirmą treniruotę – ir kodėl nereikia jaudintis.", category: "Pradedantiesiems", date: "2025 m. gruodis", readTime: "3 min skaitymo" },
       ],
+      article: {
+        backToBlog: "← Grįžti į tinklaraštį",
+        byline: "Treneris",
+        share: "Dalintis",
+        tableOfContents: "Šiame straipsnyje",
+        relatedTitle: "Skaityti toliau",
+        ctaTitle: "Pasiruošę pradėti judėti?",
+        ctaSubtitle: "Prisijunk prie KUNERA ir kurk ilgalaikę jėgą – savo tempu.",
+        ctaButton: "Registruotis",
+        lead: "Jėga nesukuriama per vieną treniruotę – ją kuria maži, nuoseklūs sprendimai kiekvieną savaitę. Štai kaip mes mąstome apie treniruotes ir kodėl mūsų požiūris tyliai aplenkia šiuolaikinės fitneso kultūros triukšmą.",
+        sections: [
+          {
+            heading: "Principas, slypintis už praktikos",
+            paragraphs: [
+              "Kiekviena KUNERA programa prasideda nuo vienos minties: tavo kūnas yra sąžiningiausias įrankis, su kuriuo kada nors treniruosiesi. Jis neslepia silpnybių ir už kantrybę atsilygina tikrais, ilgalaikiais gebėjimais.",
+              "Mes dirbame nuo pagrindų – laikysena, kvėpavimas, kontrolė – prieš pradėdami siekti intensyvumo. Rezultatas – judesys, kuris jaučiasi užtarnautas, o ne priverstinis.",
+            ],
+          },
+          {
+            heading: "Kaip iš tikrųjų atrodo treniruotė",
+            paragraphs: [
+              "Tipiška treniruotė susideda iš trijų ramių fazių: pasiruošimo, sutelkto darbo ir integracijos. Be skubėjimo, be spektaklio. Tik dėmesys tam, ką daro tavo kūnas ir kur jis gali eiti toliau.",
+              "Pažanga matuojama švaresniais pakartojimais, ilgesniais išlaikymais ir tuo jausmu, kai judi per dieną apie tai negalvodamas.",
+            ],
+          },
+          {
+            heading: "Kur eiti toliau",
+            paragraphs: [
+              "Jei tai atliepia – kitas žingsnis paprastas. Ateik treniruotis. Vienos treniruotės užtenka, kad pajustum skirtumą tarp mankštinimosi ir tikro treniravimosi.",
+            ],
+          },
+        ],
+        pullQuote: "Tau reikia ne daugiau įrangos. Tau reikia daugiau dėmesio.",
+      },
     },
     gallery: {
       title: "Galerija",
