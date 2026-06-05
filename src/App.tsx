@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import Legal from "./pages/Legal";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
