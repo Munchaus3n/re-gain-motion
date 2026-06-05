@@ -348,6 +348,40 @@ export const en = {
         { slug: "mobility-over-flexibility", title: "Mobility Over Flexibility: What Actually Matters for Your Body", excerpt: "Flexibility without control is meaningless. Learn why mobility-focused training leads to better movement and fewer injuries.", category: "Movement", date: "January 2026", readTime: "6 min read" },
         { slug: "beginners-guide", title: "Your First Session: What to Expect at KUNERA", excerpt: "Nervous about starting? Here's exactly what happens during your first training session — and why there's nothing to worry about.", category: "Getting Started", date: "December 2025", readTime: "3 min read" },
       ],
+      article: {
+        backToBlog: "← Back to blog",
+        byline: "By Coach",
+        share: "Share",
+        tableOfContents: "In this article",
+        relatedTitle: "Continue reading",
+        ctaTitle: "Ready to start moving?",
+        ctaSubtitle: "Join KUNERA and build strength that lasts — at your own pace.",
+        ctaButton: "Register now",
+        lead: "Strength isn't built in a single session — it's built in the small, consistent choices you make every week. This is how we think about training, and why our approach quietly outperforms the noise of modern fitness culture.",
+        sections: [
+          {
+            heading: "The principle behind the practice",
+            paragraphs: [
+              "Every program at KUNERA begins with a single idea: your body is the most honest piece of equipment you'll ever train with. It doesn't lie about your weaknesses, and it rewards patience with real, lasting capability.",
+              "We work from the ground up — posture, breath, control — before we ever chase intensity. The result is movement that feels earned, not forced.",
+            ],
+          },
+          {
+            heading: "What a session actually looks like",
+            paragraphs: [
+              "A typical session moves through three quiet phases: preparation, focused work, and integration. There's no rush, no spectacle. Just attention to what your body is doing and where it can go next.",
+              "Progress is measured in cleaner reps, longer holds, and the feeling of moving through your day without thinking about it.",
+            ],
+          },
+          {
+            heading: "Where to go from here",
+            paragraphs: [
+              "If any of this resonates, the next step is simple — come train. One session is enough to feel the difference between exercising and actually training.",
+            ],
+          },
+        ],
+        pullQuote: "You don't need more equipment. You need more attention.",
+      },
     },
     gallery: {
       title: "Gallery",
