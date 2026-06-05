@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import Legal from "./pages/Legal";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/faq" element={<FAQ />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Legal type="privacy" />} />
             <Route path="/terms" element={<Legal type="terms" />} />

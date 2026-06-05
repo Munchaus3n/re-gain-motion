@@ -14,7 +14,7 @@ const Blog = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <AnimatedSection className="mb-16">
-            <Link to="#" className="group block">
+            <Link to={`/blog/${p.posts[0].slug}`} className="group block">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div className="aspect-[16/10] rounded-xl overflow-hidden bg-sand/20">
                   <img src="/placeholder.svg" alt={p.posts[0].title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -34,7 +34,7 @@ const Blog = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {p.posts.slice(1).map((post, i) => (
               <AnimatedItem key={post.slug} delay={i * 0.08}>
-                <Link to="#" className="group block space-y-4">
+                <Link to={`/blog/${post.slug}`} className="group block space-y-4">
                   <div className="aspect-[16/10] rounded-xl overflow-hidden bg-sand/20">
                     <img src="/placeholder.svg" alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                   </div>
